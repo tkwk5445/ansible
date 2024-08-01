@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Change directory to 'node' and perform git pull
+      shell: git pull
+      args:
+        chdir: /root/monitoring/grafana-prometheus/node
+
+    - name: Restart Docker Compose services
+      shell: docker-compose down && docker-compose up -d
+      args:
+        chdir: /root/monitoring/grafana-prometheus/node
+

@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Change directory to 'node' and run Docker Compose Down
+      shell: docker-compose down
+      args:
+        chdir: /root/monitoring/grafana-prometheus/node
+

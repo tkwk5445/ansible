@@ -1,0 +1,13 @@
+---
+- hosts: all
+  gather_facts: no
+  become: yes
+  tasks:
+    - name: Ensure Python 3 is installed
+      raw: test -e /usr/bin/python3 || (apt-get -y update && apt-get install -y python3)
+      changed_when: false
+
+    - name: Symlink Python 3 to Python
+      raw: test -e /usr/bin/python || ln -s /usr/bin/python3 /usr/bin/python
+      changed_when: false
+

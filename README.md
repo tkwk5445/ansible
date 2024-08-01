@@ -1,6 +1,6 @@
 # Use Example
-1. pull image in Central Server(Grafana,loki,prometheus)
-$ docker pull williamyeh/ansible:alpine3
+## 1. pull image in Central Server(Grafana,loki,prometheus)
+### docker pull williamyeh/ansible:alpine3
 
 2. git clone repo
 

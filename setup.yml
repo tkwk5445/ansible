@@ -9,7 +9,7 @@
 
     - name: Clone Grafana Prometheus repository
       git:
-        repo: https://tkwk5445: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@github.com/tkwk5445/grafana-prometheus.git
+        repo: https://tkwk5445:<Personal Access Token>@github.com/tkwk5445/grafana-prometheus.git
         dest: /root/monitoring/grafana-prometheus
         version: master
 
